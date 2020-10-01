@@ -17,7 +17,7 @@ COMMANDS:
 {
   "Contacts":{
     "%PersonName%":{
-      "phone": "%phone number+gateway%", //ex: 512690420@vtext.com the @vtext.com is the verizon gateway 
+      "phone": "%phone number+gateway%",
       "email": "exapleemail@gmail.com"
     } 
   }
