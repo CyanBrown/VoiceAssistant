@@ -12,7 +12,7 @@ import smtplib
 class joke:
     @staticmethod
     def sexJoke():
-		# EXAMPLE OF SPECIALIZED TASK THAT YOU CAN ADD
+        # EXAMPLE OF SPECIALIZED TASK THAT YOU CAN ADD
         response = requests.get('https://inews.co.uk/light-relief/jokes/dirty-jokes-funny-100-best-229105')
         soup = BeautifulSoup(response.content, 'html.parser')
 
@@ -166,42 +166,41 @@ class scraping:
 # 	#preassure
 # 	#more
 
-serversmtp = smtplib.SMTP( "smtp.gmail.com", 587 )
+serversmtp = smtplib.SMTP("smtp.gmail.com", 587)
 
 serversmtp.ehlo()
 serversmtp.starttls()
 serversmtp.ehlo()
 
-serversmtp.login( 'your gmail account', 'your gmail account password')
+serversmtp.login('your gmail account', 'your gmail account password')
+
 
 class message:
 
-	@staticmethod
-	def get_carrier(number):
-		url = 'https://api.telnyx.com/v1/phone_number/1' + str(number)
-		html = requests.get(url).text
-		data = json.loads(html)
-		data = data["carrier"]
-		carrier = data["name"]
-		carrier = carrier.lower()
+    @staticmethod
+    def get_carrier(number):
+        url = 'https://api.telnyx.com/v1/phone_number/1' + str(number)
+        html = requests.get(url).text
+        data = json.loads(html)
+        data = data["carrier"]
+        carrier = data["name"]
+        carrier = carrier.lower()
 
-		if 'verizon' in carrier:
-			return "@vzwpix.com"
-		elif 'cingular' in carrier:
-			return '@mms.att.net'
-		elif 'cricket' in carrier:
-			return '@mms.mycricket.com'
-		elif 'sprint' in carrier:
-			return '@pm.sprint.com'
-		elif 't-mobile' in carrier:
-			return '@tmomail.net'
+        if 'verizon' in carrier:
+            return "@vzwpix.com"
+        elif 'cingular' in carrier:
+            return '@mms.att.net'
+        elif 'cricket' in carrier:
+            return '@mms.mycricket.com'
+        elif 'sprint' in carrier:
+            return '@pm.sprint.com'
+        elif 't-mobile' in carrier:
+            return '@tmomail.net'
 
+    @staticmethod
+    def sendText(number, message):
+        serversmtp.sendmail("your phonenumber+gateway", str(number), message)
 
-	@staticmethod
-	def sendText(number, message):
-		serversmtp.sendmail("your phonenumber+gateway",str(number),message)
-
-	@staticmethod
-	def sendEmail(number, message):
-		serversmtp.sendmail("your email",str(number),message)
-
+    @staticmethod
+    def sendEmail(number, message):
+        serversmtp.sendmail("your email", str(number), message)

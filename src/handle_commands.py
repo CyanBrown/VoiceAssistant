@@ -21,8 +21,9 @@ def command(text):
 	if text[0:6] == 'search':
 		scraping.search(text)
 
-	elif text[0:4] == 'play':
-		scraping.play(text)
+	# Doesn't work yet
+	# elif text[0:4] == 'play':
+	# 	scraping.play(text)
 
 	elif text[0:4] == 'text':
 		person = text.split()[1]
