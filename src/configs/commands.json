@@ -1,0 +1,16 @@
+{
+	"command one": "python C:\\users\\you\\example.py",
+	"open app": "C:\\users\\you\\runsometing.exe",
+
+	"contacts":{
+		"person one":{
+			"phone":"phonenumber+gateway address",
+			"email":"email"
+		},
+
+		"person two":{
+			"phone":"phonenumber+gateway address",
+			"email":"email"
+		}
+	}
+}
