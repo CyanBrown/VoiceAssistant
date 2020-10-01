@@ -69,6 +69,18 @@ INFO: Stops the program
 COMMANDS (must only say following words):
 * Exit
 ***
+#### Chatbot
+INFO: Ai trained on simple commands that you can find [here](https://github.com/CyanBrown/VoiceAssistant/blob/master/src/Chatbot/intents.json)
+
+COMMANDS: Any command that does not fall into the above categories will be responded to by the chatbot
+```json
+{"tag": "%name of type of conversation%",
+         "patterns": ["%example statement 1%","%example statement 2%","You can do as many of these as you want"],
+         "responses": ["%suggested response 1%","%suggested response 2%","You can do as many of these as you want"],
+         "context": [""]
+}
+```
+***
 ### Resources
 ***
 ##### Chatbot Tutorial from [here](https://towardsdatascience.com/how-to-create-a-chatbot-with-python-deep-learning-in-less-than-an-hour-56a063bdfc44)
