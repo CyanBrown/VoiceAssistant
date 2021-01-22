@@ -53,8 +53,7 @@ def command(text):
 			if text[4:] == i:
 				os.system(json_data[i])
 				# print(json_data[i])
-	elif 'sex joke' in text:
-		say(joke.sexJoke())
+
 	elif 'joke' in text:
 		say(joke.joke())
 
