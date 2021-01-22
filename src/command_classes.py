@@ -10,20 +10,6 @@ import smtplib
 
 
 class joke:
-    @staticmethod
-    def sexJoke():
-        # EXAMPLE OF SPECIALIZED TASK THAT YOU CAN ADD
-        response = requests.get('https://inews.co.uk/light-relief/jokes/dirty-jokes-funny-100-best-229105')
-        soup = BeautifulSoup(response.content, 'html.parser')
-
-        section = soup.find_all('blockquote', class_='qa')[0]
-        jokes = section.find_all('p')
-
-        joke = choice(jokes).text
-        joke = joke[1:joke.index('–') - 2]
-        joke = joke.replace('“', "").replace('”', "")
-
-        return joke
 
     @staticmethod
     def joke():
